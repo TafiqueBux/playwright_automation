@@ -10,7 +10,7 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: 'Apply Leave' }).click();
   await page.getByRole('link', { name: 'Dashboard' }).click();
   await expect(page.getByRole('heading', { name: 'Dashboard' })).toBeVisible();
-  await page.waitForTimeout(2000)
-  await page.locator('span').filter({ hasText: 'cdw A' }).click();
+  await page.waitForTimeout(3500)
+  await page.locator('//p[@class="oxd-userdropdown-name"]').click();
   await page.getByRole('menuitem', { name: 'Logout' }).click();
 });
